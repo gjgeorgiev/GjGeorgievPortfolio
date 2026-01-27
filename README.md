@@ -9,10 +9,10 @@ You can see more about me and my projects in my <a href="">personal website</a>,
 Over the years, I've learnt by myself many technologies and frameworks I found interesting. Here is a brief list of the languages and technologies I know:
 </p>
 <p>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><br>
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"><br>
-<img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D"><br>
-<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"><br>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"><br>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"><br>
+<img src="https://img.shields.io/badge/Vue.js-35495E?style=flat&logo=vue.js&logoColor=4FC08D"><br>
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white"><br>
 </p>
 
 
@@ -21,5 +21,5 @@ Over the years, I've learnt by myself many technologies and frameworks I found i
 Feel free to contact me for any inquiries you may have!
 </p>
 <p>
-<a href="mailto:gjgeorgiev15@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+<a href="mailto:gjgeorgiev15@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white"></a>
 </p>
