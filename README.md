@@ -6,7 +6,7 @@ You can see more about me and my projects in my <a href="">personal website</a>,
 
 <h2>Skills</h2>
 <p>
-Over the years, I've learnt by myself many technologies and frameworks I found interesting. Here is a brief list of the languages and technologies I know:
+Over the years, I've learnt  many technologies and frameworks I found interesting in my past workplaces and by myself. Here is a brief list of the languages and technologies I know and have used:
 </p>
 <p>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"><br>
