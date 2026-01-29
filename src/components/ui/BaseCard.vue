@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'bg-bg-surface text-text-primary border border-border-subtle',
+      'bg-bg-surface text-text-muted border border-border-subtle',
       'rounded-xl p-6',
       'shadow-soft',
       hoverLiftClasses,
@@ -13,6 +13,8 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   hoverLift: { type: Boolean, default: true },
 })

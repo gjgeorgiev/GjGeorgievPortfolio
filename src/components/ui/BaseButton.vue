@@ -34,8 +34,7 @@ const variantClasses = computed(() => {
   if (props.variant === "primary") {
     return `
       bg-accent text-bg-main
-      hover:bg-accent-hover
-      border-transparent
+      hover:bg-accent-hover hover:text-bg-main 
     `
   }
   if (props.variant === "secondary") {
@@ -55,12 +54,11 @@ const sizeClasses = computed(() => {
 })
 
 const focusClasses = `
-  focus:ring-2 focus:ring-accent/40
-  focus:ring-offset-2
+
 `
 
 const animatedClasses = `
-  transition-all duration-200
-  hover:-translate-y-0.5 active:scale-95
+      hover:rotate-360
+      transition-transform duration-500 ease-in-out
 `
 </script>
