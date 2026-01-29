@@ -13,18 +13,6 @@
           </p>
         </div>
 
-        <!-- Navigation -->
-        <nav class="flex gap-6 text-sm">
-          <RouterLink to="/" class="hover:text-accent transition">
-            Home
-          </RouterLink>
-          <RouterLink to="/projects" class="hover:text-accent transition">
-            Projects
-          </RouterLink>
-          <RouterLink to="/about" class="hover:text-accent transition">
-            About
-          </RouterLink>
-        </nav>
 
         <!-- Socials -->
         <div class="flex gap-4 text-sm">
@@ -59,7 +47,7 @@
                flex flex-col md:flex-row justify-between text-sm text-text-muted"
       >
       
-        <span>© {{ year }} X. All rights reserved.</span>
+        <span>© {{ year }} All rights reserved.</span>
         <span class="mt-2 md:mt-0">
           Built with Vue, Tailwind, and curiosity ☕
         </span>

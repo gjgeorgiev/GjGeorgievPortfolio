@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
-  theme: {
+  base: {
     extend: {
       colors: {
         bg: {
@@ -24,7 +24,7 @@ export default {
         },
       },
       borderRadius: {
-        xl: "12px",
+        xl: "16px",
       },
       boxShadow: {
         soft: "0 10px 30px rgba(0,0,0,0.25)",

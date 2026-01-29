@@ -1,10 +1,12 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@layer theme, base, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
-
-@tailwind utilities;
 
 @layer base {
-  :root {
+  .light {
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --text-primary: #0f172a;
@@ -13,8 +15,8 @@
   }
 
   .dark {
-    --bg-main: #0f172a;
-    --bg-surface: #111827;
+    --bg-main: #030407;
+    --bg-surface: #191130;
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
   }
@@ -22,12 +24,14 @@
   body {
     background-color: var(--bg-main);
     color: var(--text-primary);
+    font-family: "Roboto", sans-serif;
   }
 
   html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* height of navbar */
 }
+
 
 .route-enter-active,
 .route-leave-active {

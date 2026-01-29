@@ -7,7 +7,7 @@
           About Me
         </h2>
 
-        <div class="space-y-4 text-text-muted leading-relaxed">
+        <div class="space-y-4 leading-relaxed">
           <p>
             I’m a developer who enjoys building clean, scalable systems that
             balance good design with solid engineering.
