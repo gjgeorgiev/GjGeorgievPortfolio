@@ -39,9 +39,8 @@ const variantClasses = computed(() => {
   }
   if (props.variant === "secondary") {
     return `
-      border border-text-muted
       text-text-primary
-      hover:border-accent hover:text-accent
+      hover:bg-accent-hover hover:text-bg-main 
     `
   }
   return ""
