@@ -19,7 +19,7 @@ export function useScrollSpy(sectionIds) {
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {
         isScrolling.value = false
-      }, 150) // Only 150ms after last scroll event
+      }, 50) // Only 150ms after last scroll event
     })
 
     observer = new IntersectionObserver(
