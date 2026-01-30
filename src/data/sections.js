@@ -1,6 +1,6 @@
 export const sections = [
-  { id: "hero" },
-  { id: "featured" },
-  { id: "projects" },
-  { id: "about" },
+  { path: "/#hero", name: "Hero" },
+  { path: "/#featured", name: "Featured" },
+  { path: "/#projects", name: "Projects" },
+  { path: "/#about", name: "About" },
 ]

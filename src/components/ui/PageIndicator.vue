@@ -19,16 +19,11 @@
 
 <script setup>
 import { useRoute, useRouter } from "vue-router"
-
+import { sections } from "../../data/sections"
 const router = useRouter()
 const route = useRoute()
 
-const pages = [
-  { path: "/#hero", name: "Hero" },
-  { path: "/#featured", name: "Featured" },
-  { path: "/#projects", name: "Projects" },
-  { path: "/#about", name: "About" },
-]
+const pages = sections
 
 const go = (path) => {
   router.push(path)
