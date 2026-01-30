@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@layer theme, base, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
+
+@tailwind utilities;
 
 
 @layer base {
-  .light {
+  :root {
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --text-primary: #0f172a;
     --text-muted: #475569;
     --accent: #22d3ee;
+    --border-subtle: rgba(15, 23, 42, 0.08);
   }
 
   .dark {
@@ -19,6 +20,7 @@
     --bg-surface: #191130;
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
+    --border-subtle: rgba(255, 255, 255, 0.06);
   }
 
   body {
@@ -53,5 +55,14 @@
   .route-leave-active {
     transition: none;
   }
+}
+/* Hide all scrollbars */
+* {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
 }
 }

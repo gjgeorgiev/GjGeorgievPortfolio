@@ -1,6 +1,6 @@
 <template>
   <SectionWrapper id="hero">
-    <BaseCard variant="secondary" size="lg">
+    <BaseCard>
     <h1 class="text-3xl md:text-6xl font-bold mb-6">
       I build scalable web apps
     </h1>

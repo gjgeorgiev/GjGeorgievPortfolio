@@ -1,7 +1,6 @@
 <script setup>
 import Navbar from "@/components/layout/Navbar.vue"
 import Footer from "@/components/layout/Footer.vue"
-import DotNav from "@/components/ui/DotNav.vue"
 import ScrollProgress from "@/components/ui/ScrollProgress.vue"
 import PageIndicator from "@/components/ui/PageIndicator.vue"
 import "./assets/main.css";
@@ -9,9 +8,8 @@ import "./assets/main.css";
 
 <template>
   <Navbar />
-  <ScrollProgress class="md:hidden" />
+  <ScrollProgress class="" />
   <PageIndicator />
-  <DotNav />
 
   <main>
   <RouterView v-slot="{ Component }">

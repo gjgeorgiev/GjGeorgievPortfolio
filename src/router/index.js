@@ -1,22 +1,30 @@
 import { createRouter, createWebHistory } from "vue-router"
 
 import Home from "@/views/Home.vue"
-import Projects from "@/views/Projects.vue"
-import About from "@/views/About.vue"
+import Projects from "@/components/sections/Projects.vue"
+import About from "@/components/sections/About.vue"
+import Featured from "@/components/sections/FeaturedProject.vue"
+import Hero from "@/components/sections/Hero.vue"
 
 export default createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: Home },
-    { path: "/projects", component: Projects },
-    { path: "/about", component: About },
+    { path: "/#hero", component: Hero },
+    { path: "/#featured", component: Featured },
+    { path: "/#projects", component: Projects },
+    { path: "/#about", component: About },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) return savedPosition
-
+ scrollBehavior(to, from, savedPosition) {
+  if (to.hash) {
     return {
-      top: 0,
+      el: to.hash,
       behavior: "smooth",
     }
-  },
+  }
+  
+  if (savedPosition) return savedPosition
+  
+  return { top: 0 }
+},
 })
