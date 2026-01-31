@@ -50,7 +50,7 @@ const variantClasses = computed(() => {
 const sizeClasses = computed(() => {
   if (props.size === "sm") return "px-4 py-2 text-sm"
   if (props.size === "lg") return "px-8 py-3 text-lg"
-  return "px-6 py-2.5 text-base"
+  return "px-3 py-2.5 text-base"
 })
 
 const focusClasses = `

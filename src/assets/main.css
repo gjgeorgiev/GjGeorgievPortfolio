@@ -12,9 +12,9 @@
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --text-primary: #0f172a;
-    --text-muted: #475569;
-    --accent: #22d3ee;
-    --border-subtle: rgba(15, 23, 42, 0.08);
+    --text-muted: #474b81;
+    --accent: #22eea0;
+    --bg-subtle: rgba(15, 23, 42, 0.08);
   }
 
   .dark {
@@ -22,8 +22,8 @@
     --bg-surface: #191130;
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
-    --border-subtle: rgba(255, 255, 255, 0.06);
-    --accent: #cc22ee;
+    --accent: #22eea0;
+    --bg-subtle: rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -39,7 +39,6 @@
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
   }
-
   .route-enter-active,
   .route-leave-active {
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -70,12 +69,63 @@
   *::-webkit-scrollbar {
     display: none;
   }
+
 }
 
 
-/* Utility Classes /*
+/* Utility Classes */
 @layer utilities {
+  :hover {
+    .hover\:text-accent:hover {
+      color: var(--accent);
+    }
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
   .text-accent {
     color: var(--accent);
+  }
+  .bg-surface {
+    background-color: var(--bg-surface);
+  }
+  .bg-subtle {
+    background-color: var(--bd-subtle);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .hamburger {
+    stroke: var(--accent);
+  }
+  .button-hamburger {
+  overflow: hidden;
+  scale: 1.25;
+  stroke: var();
+  }
+
+  .button-hamburger .hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transition:
+    translate 0.5s,
+    rotate 0.5s;
+  }
+
+  .button-hamburger[aria-expanded="true"] .hamburger {
+  translate: -14px -17px;
+  rotate: 0.125turn;
+  }
+
+  .button-hamburger .line {
+  transition: 0.5s;
+  stroke-dasharray: 60 31 60 300;
+  }
+
+  .button-hamburger[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
   }
 }
