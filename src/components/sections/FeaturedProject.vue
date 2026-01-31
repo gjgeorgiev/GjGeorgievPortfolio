@@ -2,9 +2,9 @@
   <SectionWrapper id="featured">
     <!-- Header -->
     <div class="max-w-3xl mb-20">
-      <span class="text-accent text-sm font-medium">
+      <h1 class="md:text-2xl font-bold">
         Featured Project
-      </span>
+      </h1>
 
       <h2 class="text-3xl md:text-4xl font-semibold mt-3 mb-4">
         {{ project.title }}

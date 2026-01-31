@@ -92,9 +92,8 @@
   .bg-subtle {
     background-color: var(--bd-subtle);
   }
-  .text-muted {
-    color: var(--text-muted);
-  }
+  
+  /* Hamburger Button Classes */
   .hamburger {
     stroke: var(--accent);
   }

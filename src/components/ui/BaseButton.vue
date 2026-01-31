@@ -24,7 +24,7 @@ const props = defineProps({
 const emit = defineEmits(['click'])
 
 const baseClasses = `
-  select-none
+  justify-center
   font-semibold
   rounded-lg
   focus:outline-none

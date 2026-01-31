@@ -1,13 +1,12 @@
 <template>
   <div
-    class="fixed right-6 top-1/2 -translate-y-1/2
-           flex flex-col gap-8 z-50"
+    class="fixed right-40 top-1/2 z-10 hidden -translate-y-1/2 flex-col gap-8 2xl:flex"
   >
     <button
       v-for="page in pages"
       :key="page.path"
       @click="go(page.path)"
-      class="w-3 h-3 rounded-full transition-all hover:bg-green-300"
+      class="w-3 h-3 rounded-full transition-all hover:text-green-300"
       :class="{
         'bg-green-300': route.hash === page.path,
         'bg-gray-600': route.hash !== page.path

@@ -30,7 +30,7 @@
           v-if="project.link"
           :href="project.link"
           target="_blank"
-          class="text-accent hover:underline"
+          class="text-muted hover:text-accent transition"
         >
           Live →
         </a>
@@ -38,7 +38,7 @@
           v-if="project.repo"
           :href="project.repo"
           target="_blank"
-          class="text-text-muted hover:text-accent transition"
+          class="text-muted hover:text-accent transition"
         >
           GitHub →
         </a>
