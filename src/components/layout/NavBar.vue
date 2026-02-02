@@ -1,5 +1,5 @@
 <template>
-  <nav class="select-none flex justify-around items-center px-4 py-4 w-screen fixed top-0 bg-bg-main/80 backdrop-blur-md z-50">
+  <nav class="select-none flex justify-around items-center px-4 py-4 w-screen fixed top-0 bg-bg-main/80 backdrop-blur-md z-40">
     <div class="select-none font-bold text-3xl bg-linear-60 from-purple-400 to-pink-500 bg-clip-text text-transparent">Placeholder</div>
       <BaseButton @click="isDark = !isDark"  variant="primary" size="lg">
         {{ isDark ? "🌙" : "☀️" }}
@@ -14,8 +14,8 @@
        </li>
       </ul>
       <Hamburger class="xl:hidden" :isOpen="navOpen" @toggle="navOpen = !navOpen"/>
-      <MobileMenu :isOpen="navOpen" @close="navOpen = false"/>
   </nav>
+  <MobileMenu class="xl:hidden" :isOpen="navOpen" @close="navOpen = false"/>
 </template>
 
 <script setup>

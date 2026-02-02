@@ -1,18 +1,18 @@
 <template>
   <transition name="slide">
-    <div
+    <aside
       v-if="isOpen"
-      class="fixed inset-0 w-screen bg-black/40 h-screen z-40 flex flex-col"
+      class="fixed w-screen bg-surface h-screen z-30 flex flex-col"
     >
       <!-- Menu Content -->
-      <div class="flex-1 flex flex-col justify-between">
+      <div class="flex flex-col justify-between">
         <!-- Navigation Links -->
-        <div class="p-6">
+        <div class="p-6 mt-26">
           <ul class="space-y-4">
             <li
               v-for="(section, i) in sections.filter((section) => section.path)"
               :key="section.path"
-              class="text-lg font-medium"
+              class="text-2xl font-medium"
             >
               <RouterLink
                 :to="`/${section.path}`"
@@ -29,18 +29,12 @@
         </div>
 
         <!-- Footer -->
+        <div class="mt-auto fixed bottom-0 w-full">
         <Footer />
+        </div>
       </div>
 
-      <!-- Close Button -->
-      <button
-        @click="closeMenu"
-        class="absolute top-4 right-4 text-2xl text-secondary hover:text-accent transition-colors"
-        aria-label="Close menu"
-      >
-        ✕
-      </button>
-    </div>
+    </aside>
   </transition>
 </template>
 
@@ -68,7 +62,7 @@ const closeMenu = () => {
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .slide-enter-from,

@@ -1,7 +1,7 @@
 <template>
   <button
     @click="$emit('toggle', $event)"
-    class="button-hamburger relative h-9 w-9 rounded-full p-2 text-secondary 2xl:h-16 2xl:w-16 2xl:p-4 [&>*]:w-8 2xl:[&>*]:w-16"
+    class="button-hamburger relative h-9 w-9 rounded-full p-2 text-secondary z-40 2xl:h-16 2xl:w-16 2xl:p-4 [&>*]:w-8 2xl:[&>*]:w-16"
     aria-controls="primary-navigation"
     ref="button"
   >
@@ -32,8 +32,10 @@ const button = ref(null);
 watch(() => props.isOpen, (newVal) => {
   if (newVal) {
     button.value.classList.add('open');
+    button.value?.setAttribute("aria-expanded", "true");
   } else {
     button.value.classList.remove('open');
+    button.value?.setAttribute("aria-expanded", "false");
   }
 });
 
@@ -48,3 +50,7 @@ onMounted(() => {
 });
 
 </script>
+
+<style scoped>
+
+</style>

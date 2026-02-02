@@ -19,7 +19,7 @@
 
   .dark {
     --bg-main: #030407;
-    --bg-surface: #191130;
+    --bg-surface: #000000;
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
     --accent: #22eea0;
@@ -75,7 +75,7 @@
 
 /* Utility Classes */
 @layer utilities {
-  :hover {
+    :hover {
     .hover\:text-accent:hover {
       color: var(--accent);
     }
@@ -126,5 +126,12 @@
   .button-hamburger[aria-expanded="true"] .line {
   stroke-dasharray: 60 105 60 300;
   stroke-dashoffset: -90;
+  }
+  /* Page Indicator Button Classes */
+  .button-indicator {
+    &:hover {
+        background-color: var(--accent);
+        scale: 1.25; 
+    }
   }
 }
