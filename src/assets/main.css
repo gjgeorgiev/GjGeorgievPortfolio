@@ -75,6 +75,10 @@
 
 /* Utility Classes */
 @layer utilities {
+  /* No Scroll Class */
+  .no-scroll {
+    overflow: hidden;
+  }
     :hover {
     .hover\:text-accent:hover {
       color: var(--accent);

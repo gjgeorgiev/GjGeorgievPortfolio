@@ -33,9 +33,11 @@ watch(() => props.isOpen, (newVal) => {
   if (newVal) {
     button.value.classList.add('open');
     button.value?.setAttribute("aria-expanded", "true");
+    document.body.classList.add('no-scroll');
   } else {
     button.value.classList.remove('open');
     button.value?.setAttribute("aria-expanded", "false");
+    document.body.classList.remove('no-scroll');
   }
 });
 
