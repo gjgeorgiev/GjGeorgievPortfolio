@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-subtle md:mt-auto">
+  <footer class="border-t border-subtle mt-5 md:mt-auto">
     <div class="max-w-6xl mx-auto px-6 py-12">
       <!-- Top row -->
       <div

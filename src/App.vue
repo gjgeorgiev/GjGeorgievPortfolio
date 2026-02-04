@@ -8,8 +8,8 @@ import "./assets/main.css";
 <template>
   <Navbar />
 
-  <main>
     <PageIndicator />
+    <main class= "pt-15 min-h-[calc(100vh-3.75rem)]">
     <RouterView v-slot="{ Component }">
     <Transition name="route" mode="out-in">
       <component :is="Component" />

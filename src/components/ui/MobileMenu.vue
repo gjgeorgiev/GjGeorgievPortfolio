@@ -7,7 +7,7 @@
       <!-- Menu Content -->
       <div class="flex flex-col justify-between">
         <!-- Navigation Links -->
-        <div class="p-6 mt-26">
+        <div class="p-6 mt-14">
           <ul class="space-y-4">
             <li
               v-for="(section, i) in sections.filter((section) => section.path)"

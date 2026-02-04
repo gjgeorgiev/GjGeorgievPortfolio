@@ -1,9 +1,8 @@
 <template>
   <div
     :class="[
-      'bg-bg-surface text-text-muted border border-border-subtle',
-      'rounded-xl p-6',
-      'shadow-soft',
+      'bg-surface text-muted border border-border p-6',
+      'shadow-md',
       hoverLiftClasses,
       animationClasses
     ]"

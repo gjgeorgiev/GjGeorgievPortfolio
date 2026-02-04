@@ -2,7 +2,6 @@
   <button
     :class="[
       baseClasses,
-      variantClasses,
       sizeClasses,
       animatedClasses
     ]"
@@ -16,7 +15,6 @@
 import { computed } from 'vue'
 
 const props = defineProps({
-  variant: { type: String, default: "primary" },
   size: { type: String, default: "md" },
 })
 
@@ -26,30 +24,20 @@ const baseClasses = `
   justify-center
   font-semibold
   rounded-lg
+  text-lg
   focus:outline-none
   inline-flex items-center justify-center
 `
-
-const variantClasses = computed(() => {
-  if (props.variant === "primary") {
-    return `
-      bg-accent text-bg-main
-      hover:bg-accent-hover hover:text-bg-main 
-    `
-  }
-  if (props.variant === "secondary") {
-    return `
-      text-text-primary
-      hover:bg-accent-hover hover:text-bg-main 
-    `
-  }
-  return ""
-})
-
 const sizeClasses = computed(() => {
-  if (props.size === "sm") return "px-4 py-2 text-sm"
-  if (props.size === "lg") return "px-8 py-3 text-lg"
-  return "px-3 py-2.5 text-base"
+  switch (props.size) {
+    case 'sm':
+      return 'px-3 py-1.5 text-sm'
+    case 'lg':
+      return 'px-5 py-3 text-lg'
+    case 'md':
+    default:
+      return 'px-4 py-2 text-base'
+  }
 })
 
 
