@@ -11,7 +11,8 @@
     --bg-surface: #ffffff;
     --text-primary: #0f172a;
     --text-muted: #474b81;
-    --accent: #22eea0;
+    --accent: #7ce2bb;
+    --accent-muted: hsl(157, 64%, 69%);
     --bg-subtle: rgba(15, 23, 42, 0.08);
   }
 
@@ -21,6 +22,7 @@
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
     --accent: #22eea0;
+    --accent-muted: hsl(157, 64%, 69%);
     --bg-subtle: rgba(255, 255, 255, 0.06);
   }
 }
@@ -135,5 +137,46 @@
   /* No Scroll Class */
   .no-scroll {
     overflow: hidden;
+  }
+  
+  /* Hero Section Text */
+  .hero_sec {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__text {
+    margin-bottom: 32px;
+    max-width: 70ch;
+  }
+
+  .hero__links{
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .link {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-muted);
+  }
+  .link__text {
+    color: var(--text-muted);
+  }
+  .toast {
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-surface);
+    color: var(--text-muted);
+    border-style: #22eea0;
+    border-width: 2px;
+    padding: calc(var(--spacing)*4);
+    margin-bottom: calc(var(--spacing)*2.5);
   }
 }

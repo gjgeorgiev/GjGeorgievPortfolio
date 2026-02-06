@@ -21,12 +21,10 @@ const props = defineProps({
 const emit = defineEmits(['click'])
 
 const baseClasses = `
-  justify-center
   font-semibold
   rounded-lg
   text-lg
   focus:outline-none
-  inline-flex items-center justify-center
 `
 const sizeClasses = computed(() => {
   switch (props.size) {

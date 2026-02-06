@@ -1,7 +1,7 @@
 <template>
   <nav class="fixed select-none flex justify-around items-center px-4 py-4 w-screen  h-15 md:h-16 lg:h-20 top-0 bg-bg-main/80 backdrop-blur-md z-40">
-    <p class="font-bold text-3xl text-accent">G.</p>
-      <ToggleDarkBtn @click="isDark = !isDark"  variant="primary" size="lg">
+      <p class="font-bold text-3xl text-accent">G.</p>
+      <ToggleDarkBtn @click="isDark = !isDark"  size="md">
         {{ isDark ? "🌙" : "☀️" }}
       </ToggleDarkBtn>
       <ul class="uppercase hidden gap-4 font-medium xl:flex">
@@ -21,7 +21,7 @@
 <script setup>
 import { ref } from "vue";
 import { useTheme } from "@/composables/useTheme"
-import { useRoute} from "vue-router"
+import { useRoute } from "vue-router"
 import ToggleDarkBtn from "../ui/ToggleDarkBtn.vue";
 import {sections} from "@/data/sections.js"
 import Hamburger from "../ui/Hamburger.vue";
