@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import Home from "@/views/Home.vue"
 import Projects from "@/components/sections/Projects.vue"
 import About from "@/components/sections/About.vue"
-import Featured from "@/components/sections/FeaturedProject.vue"
+// import Featured from "@/components/sections/FeaturedProject.vue"
 import Hero from "@/components/sections/Hero.vue"
 
 export default createRouter({
@@ -11,7 +11,7 @@ export default createRouter({
   routes: [
     { path: "/", component: Home },
     { path: "/#hero", component: Hero },
-    { path: "/#featured", component: Featured },
+    // { path: "/#featured", component: Featured },
     { path: "/#projects", component: Projects },
     { path: "/#about", component: About },
   ],

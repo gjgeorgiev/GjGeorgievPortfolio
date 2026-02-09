@@ -6,11 +6,11 @@
         class="footer__items md:flex-row md:items-center"
       >
         <!-- Identity -->
-          <p class="text-muted">
+          <p class="link__text">
             M.Sc. Automation Engineering, 2+ years of Software Development experience
           </p>
         <!-- Socials -->
-         <span class="text-muted">·</span>
+         <span class="link__text">·</span>
           <a
             href="https://github.com/gjgeorgiev"
             target="_blank"
@@ -20,12 +20,12 @@
             GitHub: 
             <span class="link__text">@gjgeorgiev</span>
           </a> 
-          <span class="text-muted">·</span>
+          <span class="link__text">·</span>
           <button class="link email-btn hover:text-accent"
             :class="{ 'pointer-events-none': isLocked }" @click="copyFromElement(emailSpan)">email:
             <span ref="emailSpan" class="link__text">gjgeorgiev15 [at] gmail (dot) com</span>
           </button>
-          <span class="text-muted">·</span>
+          <span class="link__text">·</span>
           <a class="link text-accent" href="#hero">Back to top</a>
       </div>
 
