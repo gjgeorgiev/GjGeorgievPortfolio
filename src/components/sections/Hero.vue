@@ -11,12 +11,12 @@
 			  platforms and systems that power them.
     </p>
     <p class="mb-8 text-xl">
-      Interested in inverter control or cloud architecture? Let's talk.
+      Interested in automation or cloud architecture? Let's talk.
     </p>
     <p class="hero__links">
       <a class="link hover:text-accent" href="https://github.com/gjgeorgiev" target="_blank">
         github:
-        <span class="link__text">@gjgeorgiev15</span>
+        <span class="link__text">@gjgeorgiev</span>
       </a>
       <br>
       <button class="link email-btn hover:text-accent"

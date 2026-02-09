@@ -1,61 +1,77 @@
 <template>
-  <footer class="border-t border-subtle mt-5 md:mt-auto">
-    <div class="max-w-6xl mx-auto px-6 py-12">
-      <!-- Top row -->
+  
+  <footer class="max-w-3/4 border-t mx-auto">
+    <div class="max-w-6xl mx-auto px-6 py-10">
       <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+        class="footer__items md:flex-row md:items-center"
       >
         <!-- Identity -->
-        <div>
-          <p class="font-semibold text-lg">X</p>
-          <p class="text-text-muted text-sm mt-1">
-            Building thoughtful web experiences.
+          <p class="text-muted">
+            M.Sc. Automation Engineering, 2+ years of Software Development experience
           </p>
-        </div>
-
-
         <!-- Socials -->
-        <div class="flex gap-4 text-sm">
+         <span class="text-muted">·</span>
           <a
-            href="https://github.com/yourname"
+            href="https://github.com/gjgeorgiev"
             target="_blank"
-            rel="noopener"
-            class="text-text-muted hover:text-accent transition"
+            rel="external noreferrer"
+            class="link hover:text-accent"
           >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/yourname"
-            target="_blank"
-            rel="noopener"
-            class="text-text-muted hover:text-accent transition"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:you@email.com"
-            class="text-text-muted hover:text-accent transition"
-          >
-            Email
-          </a>
-        </div>
+            GitHub: 
+            <span class="link__text">@gjgeorgiev</span>
+          </a> 
+          <span class="text-muted">·</span>
+          <button class="link email-btn hover:text-accent"
+            :class="{ 'pointer-events-none': isLocked }" @click="copyFromElement(emailSpan)">email:
+            <span ref="emailSpan" class="link__text">gjgeorgiev15 [at] gmail (dot) com</span>
+          </button>
+          <span class="text-muted">·</span>
+          <a class="link text-accent" href="#hero">Back to top</a>
       </div>
 
-      <!-- Bottom row -->
-      <div
-        class="mt-10 pt-6 border-t border-border-subtle
-               flex flex-col md:flex-row justify-between text-sm text-text-muted"
-      >
-      
-        <span>© {{ year }} All rights reserved.</span>
-        <span class="mt-2 md:mt-0">
-          Built with Vue, Tailwind, and curiosity ☕
-        </span>
-      </div>
     </div>
+    <Transition name="toast-transition">
+    <SimpleToast v-if="showToast">Copied to clipboard!</SimpleToast>
+    </Transition>
   </footer>
 </template>
 
 <script setup>
-const year = new Date().getFullYear()
+import SimpleToast from "../ui/SimpleToast.vue";
+import { useClipboardToast } from '@/composables/showToast'
+import { ref } from "vue";
+
+const emailSpan = ref(null)
+
+const { showToast, isLocked, copyFromElement } =
+  useClipboardToast(1500)
 </script>
+
+<style scoped>
+    .toast-transition-enter-active,
+    .toast-transition-leave-active {
+      transition:
+        opacity 0.25s ease-out,
+        transform 0.25s ease-out;
+    }
+
+    .toast-transition-enter-from {
+      opacity: 0;
+      transform: translate(-50%, calc(-50% + 16px));
+    }
+
+    .toast-transition-enter-to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .toast-transition-leave-from {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .toast-transition-leave-to {
+      opacity: 0;
+      transform: translate(-50%, calc(-50% + 16px));
+    }
+</style>

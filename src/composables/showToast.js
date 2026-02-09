@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-export function useClipboardToast(duration = 4000) {
+export function useClipboardToast(duration) {
   const showToast = ref(false)
   const isLocked = ref(false)
 

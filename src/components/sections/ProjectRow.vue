@@ -18,7 +18,7 @@
         <span
           v-for="tech in project.tech"
           :key="tech"
-          class="text-sm border border-border-subtle px-3 py-1 rounded-full"
+          class="text-sm border border-subtle px-3 py-1 rounded-full"
         >
           {{ tech }}
         </span>
@@ -48,7 +48,7 @@
     <!-- Visual / Placeholder -->
     <div
       class="w-full h-48 md:h-64 bg-bg-surface
-             border border-border-subtle rounded-xl"
+             border border-subtle rounded-xl"
     />
   </div>
 </template>
