@@ -4,7 +4,7 @@
       Projects
     </h2>
 
-    <div class="space-y-20">
+    <div class="grid__projects">
       <ProjectRow
         v-for="(project, index) in projects"
         :key="project.title"

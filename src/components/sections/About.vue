@@ -14,13 +14,13 @@
           </p>
 
           <p>
-            I’m particularly interested in serverless architectures, data-driven
-            applications, and frontend experiences that feel fast and intentional.
+            I’m particularly interested in serverless architectures and data-driven
+            applications.
           </p>
 
           <p>
-            When I’m not coding, I enjoy learning new tools, refining workflows,
-            and turning complex problems into simple solutions.
+            When I’m not coding, I enjoy learning new tools, gaming,
+            and going to the gym.
           </p>
         </div>
       </div>
@@ -35,7 +35,8 @@
           <span
             v-for="skill in skills"
             :key="skill"
-            class="text-sm border border-border-subtle px-4 py-1.5 rounded-full"
+            :data-type="skill"
+            class="tech-badge"
           >
             {{ skill }}
           </span>
@@ -50,9 +51,9 @@ import SectionWrapper from "@/components/ui/SectionWrapper.vue"
 const skills = [
   "Vue",
   "JavaScript",
-  "Vite",
-  "Tailwind CSS",
+  "TailwindCSS",
   "AWS",
   "Git",
+  "Python",
 ]
 </script>

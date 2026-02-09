@@ -1,6 +1,6 @@
 <template>
   <section
-    class="max-w-3/4 mx-auto px-2 pt-2 md:py-24"
+    class="max-w-3/4 mx-auto px-2 pt-2 md:py-24 mb-25"
   >
     <slot />
   </section>

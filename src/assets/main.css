@@ -12,7 +12,7 @@
     --text-primary: #0f172a;
     --text-muted: #474b81;
     --accent: #7ce2bb;
-    --bg-subtle: rgba(15, 23, 42, 0.08);
+    --subtle: rgba(15, 23, 42, 0.08);
   }
 
   .dark {
@@ -21,7 +21,7 @@
     --text-primary: #f8fafc;
     --text-muted: #94a3b8;
     --accent: #22eea0;
-    --bg-subtle: rgba(255, 255, 255, 0.06);
+    --subtle: rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -189,8 +189,232 @@
     color: var(--text-muted);
     border-style: #22eea0;
     border-width: 2px;
+    z-index: 50;
     padding: calc(var(--spacing)*4);
     margin-bottom: calc(var(--spacing)*2.5);
   }
+
+  /* Grid View */
+  .grid__projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (width >= 48rem) {
+    .grid__projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+  }
+    @media (width >= 75rem) {
+    .grid__projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+  }
+
   /* Card component */
+
+  .card {
+    position: relative;
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+    border-radius: 0;
+    display: grid;
+    z-index: 1;
+    grid-template-rows: auto auto 1fr;
+    padding: calc(var(--spacing) * 6);
+    transition: border-color 0.18s ease, box-shadow 0.16 ease;
+    background-color: var(--bg-surface);
+  }
+  .card:hover {
+    border-color: var(--accent);
+  }
+
+ /*Card Title and Badge */
+
+  .title__bar {
+    display: fixed;
+    gap: .85rem;
+    padding: .75rem .9rem;
+    border-bottom: 1px solid var(--subtle);
+    background: var(--bg-surface);
+}
+
+  .title {
+    margin: 0;
+    font-size: .92rem;
+    letter-spacing: .02em;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+  }
+
+ /* Card Content */
+
+ .content__bar {
+    padding: 1rem;
+    display: grid;
+    gap: .75rem;
+    align-content: start;
+}
+ /* Card Badges and color switches with data-types */
+
+  .badge {
+    font-size: .78rem;
+    color: var(--text-primary);
+    border: 1px solid var(--text-muted);
+    border-radius: 0;
+    padding: .2rem .55rem;
+    background: #ffffff05;
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+
+  .badge[data-type=open-source] {
+    border-color: #36f2c240;
+    color: #36f2c2eb;
+    background: #36f2c20d;
+  }
+  
+  .badge[data-type=closed-source] {
+      border-color: #f6c17738;
+      color: #f6c177eb;
+      background: #f6c1770d;
+  }
+
+  /* Tech Badge and Data Type Coloring*/
+
+  .tech__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: .6rem;
+    margin-bottom: .5rem;
+ }
+
+  .tech-badge {
+    font-size: .72rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    border: 1px solid var(--text-muted);
+    border-radius: 0;
+    padding: .18rem .45rem;
+    background: #ffffff05;
+    text-transform: lowercase;
+    letter-spacing: .02em;
+  }
+  
+  /* Python */
+  .tech-badge[data-type=Python] {
+      border-color: #4c7fa959;
+      color: #4a97d5f2;
+      background: #2b5d8614;
+  }
+
+  /* AWS */
+  .tech-badge[data-type=AWS] {
+      border-color: #f7a41d59;
+      color: #f7b845f2;
+      background: #f7a41d14;
+  }
+
+  /* Vue */
+  .tech-badge[data-type="Vue"] {
+      border-color: #42b88359;
+      color: #42b883f2;
+      background: #42b88314;
+  }
+
+  /* AWS Lambda */
+  .tech-badge[data-type="Lambda"] {
+      border-color: #ff990059;
+      color: #ff9900f2;
+      background: #ff990014;
+  }
+
+  /* AWS EventBridge */
+  .tech-badge[data-type="EventBridge"] {
+      border-color: #c925d159;
+      color: #c925d1f2;
+      background: #c925d114;
+  }
+
+  /* AWS S3 */
+  .tech-badge[data-type="S3"] {
+      border-color: #569a3159;
+      color: #6ca544f2;
+      background: #569a3114;
+  }
+
+  /* Tailwind CSS */
+  .tech-badge[data-type="TailwindCSS"] {
+      border-color: #38bdf859;
+      color: #38bdf8f2;
+      background: #38bdf814;
+  }
+
+  /* JavaScript */
+  .tech-badge[data-type="JavaScript"] {
+      border-color: #f7df1e59;
+      color: #f7df1ef2;
+      background: #f7df1e14;
+  }
+
+  /* Vite */
+  .tech-badge[data-type="Vite"] {
+      border-color: #646cff59;
+      color: #a5b4fcf2;
+      background: #646cff14;
+  }
+
+  /* Git */
+  .tech-badge[data-type="Git"] {
+      border-color: #f0503259;
+      color: #f05032f2;
+      background: #f0503214;
+  }
+  /* D3.js */
+  .tech-badge[data-type="D3.js"] {
+    border-color: #f9a03c59;
+    color: #f9a03cf2;
+    background: #f9a03c14;
+  }
+  /* Button Links Bar */
+  
+ .links__bar {
+    margin-top: .1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+ }
+ /* Buttons for Card */
+
+ .btn__primary {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .75rem;
+    border-radius: 0;
+    border: 1px solid var(--subtle);
+    text-decoration: none;
+    font-size: .9rem;
+    line-height: 1;
+ }
+  
+  .btn__github {
+    border-color: #36f2c252;
+    background: #24e9b817;
+    color: var(--accent);
+}
+  .btn__live {
+    background: var(--subtle);
+    color: var(--text-muted);
+    border-color: var(--text-primary);
+  }
+  .closed__proj {
+    color: #f9a13c86;
+  }
 }

@@ -1,6 +1,6 @@
 <template>
   <SectionWrapper id="hero">
-    <header class="mb-25">
+    <header>
     <div class="hero_sec">
     <p class="text-2xl md:text-4xl font-bold mb-8">
       Software Developper | Automation Engineer

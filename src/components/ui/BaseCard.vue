@@ -1,14 +1,13 @@
 <template>
-  <div
+  <article
     :class="[
-      'bg-surface text-muted border border-border p-6',
-      'shadow-md',
+      'card',
       hoverLiftClasses,
       animationClasses
     ]"
   >
     <slot />
-  </div>
+</article>
 </template>
 
 <script setup>

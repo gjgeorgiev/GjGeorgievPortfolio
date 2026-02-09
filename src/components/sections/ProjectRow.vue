@@ -1,59 +1,62 @@
 <template>
-  <div
-    class="flex flex-col md:grid md:grid-cols-2 gap-12 items-center"
-    :class="{ 'md:flex-row-reverse': reverse }"
-  >
-    <!-- Text -->
-    <div>
-      <h3 class="text-xl md:text-2xl font-semibold mb-3">
-        {{ project.title }}
-      </h3>
+    <!-- Card -->
+    <BaseCard>
+      <div class="title__bar">
+        <h3 class="title">
+          {{ project.title }}
+        </h3>
+        <span class="badge"
+        :data-type="project.type"> {{ project.type }}</span>
+      </div>
 
+      <div class="media__bar"></div>
+
+      <div class="content__bar">
       <p class="text-text-muted mb-6">
         {{ project.description }}
       </p>
-
-      <!-- Tech tags -->
-      <div class="flex flex-wrap gap-2 mb-6">
+      <div class="tech__badges">
         <span
           v-for="tech in project.tech"
           :key="tech"
-          class="text-sm border border-subtle px-3 py-1 rounded-full"
+          :data-type="tech"
+          class="tech-badge"
         >
           {{ tech }}
         </span>
+        </div>
       </div>
 
-      <!-- Links -->
-      <div class="flex gap-4 text-sm">
+      <div class="links__bar">
         <a
           v-if="project.link"
           :href="project.link"
           target="_blank"
-          class="text-muted hover:text-accent transition"
+          class="btn__primary btn__live hover:text-accent transition"
         >
-          Live →
+          Live
         </a>
         <a
           v-if="project.repo"
           :href="project.repo"
           target="_blank"
-          class="text-muted hover:text-accent transition"
+          class="btn__primary btn__github hover:text-accent transition"
         >
-          GitHub →
+          View on Github
+        </a>
+        <a
+          v-if="project.closed"
+          class="closed__proj"
+        >
+          Closed-source project — details available on request.
         </a>
       </div>
-    </div>
-
-    <!-- Visual / Placeholder -->
-    <div
-      class="w-full h-48 md:h-64 bg-bg-surface
-             border border-subtle rounded-xl"
-    />
-  </div>
+    </BaseCard>
 </template>
 
 <script setup>
+import BaseCard from '../ui/BaseCard.vue';
+
 defineProps({
   project: Object,
   reverse: Boolean,
