@@ -3,11 +3,11 @@
     <header>
     <div class="hero_sec">
     <p class="text-2xl md:text-4xl font-bold mb-8">
-      Software Developper | Automation Engineer
+      Software Developer | Automation Engineer
     </p>
     <p class="hero__text">
         I'm an Automation Engineer with a career as a Software
-			  Developper. I combine domain knowledge with engineering experience to build automation
+			  Developer. I combine domain knowledge with engineering experience to build automation
 			  platforms and systems that power them.
     </p>
     <p class="mb-8 text-xl">

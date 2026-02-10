@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Energy Management System",
     description:
-      "Worked at building an MVP for the current iteration of an Energy Management platfrom. Was mostly tasked with doing the graphs in D3.js and building backend services with Flask.",
+      "Worked on building an MVP for the current iteration of an Energy Management platfrom. Was mostly tasked with doing the graphs in D3.js, building backend services with Python and API endpoints with Flask.",
     tech: ["Vue","Python", "D3.js"],
     closed: "#",
     type: "closed-source"
