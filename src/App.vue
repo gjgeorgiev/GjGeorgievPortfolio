@@ -1,6 +1,6 @@
 <script setup>
-import Navbar from "@/components/layout/Navbar.vue"
-import Footer from "@/components/layout/Footer.vue"
+import Navbar from "/src/components/layout/Navbar.vue"
+import Footer from "/src/components/layout/Footer.vue"
 import PageIndicator from "@/components/ui/PageIndicator.vue"
 import "./assets/main.css";
 </script>
