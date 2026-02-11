@@ -1,7 +1,7 @@
 <h2>Hello!</h2>
 <p>
 I'm Georgi, a developer  interested in many fields, driven by passion and willingness to learn new technologies.<br>
-You can see more about me and my projects in my <a href="gjgeorgiev.xyz">personal website hosted on AWS</a>, or keep reading for a short introduction!
+You can see more about me and my projects in my <a href="https://gjgeorgiev.xyz">personal website hosted on AWS</a>, or keep reading for a short introduction!
 </p>
 
 <h2>Skills</h2>
