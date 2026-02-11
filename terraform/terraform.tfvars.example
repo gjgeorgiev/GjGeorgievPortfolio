@@ -1,0 +1,4 @@
+domain_name = "example.com"
+zone_id     = "ZXXXXXXXXXXXXX"
+bucket_name = "example-bucket"
+github_repo = "username/repo"

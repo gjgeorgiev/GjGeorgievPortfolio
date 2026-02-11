@@ -1,7 +1,7 @@
 <h2>Hello!</h2>
 <p>
 I'm Georgi, a developer  interested in many fields, driven by passion and willingness to learn new technologies.<br>
-You can see more about me and my projects in my <a href="">personal website</a>, or keep reading for a short introduction!
+You can see more about me and my projects in my <a href="gjgeorgiev.xyz">personal website hosted on AWS</a>, or keep reading for a short introduction!
 </p>
 
 <h2>Skills</h2>
@@ -21,5 +21,5 @@ Over the years, I've learnt  many technologies and frameworks I found interestin
 Feel free to contact me for any inquiries you may have!
 </p>
 <p>
-<a href="mailto:gjgeorgiev15@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white"></a>
+<p>gjgeorgiev15@gmail.com</p>
 </p>
