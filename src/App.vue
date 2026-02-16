@@ -9,7 +9,7 @@ import "./assets/main.css";
   <Navbar />
 
     <PageIndicator />
-    <main class= "pt-15 min-h-[calc(100vh-3.75rem)]">
+    <main class= "">
     <RouterView v-slot="{ Component }">
     <Transition name="route" mode="out-in">
       <component :is="Component" />

@@ -5,7 +5,8 @@ on:
     branches: [ "main" ]
 
   workflow_dispatch: {}
-
+env:
+  
 permissions:
   id-token: write   # This is required for requesting the JWT
   contents: read    # This is required for actions/checkout
@@ -33,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: us-east-1
-          role-to-assume: arn:aws:iam::366904627563:role/GithubOIDC
+          role-to-assume: ${{secrets.AWS_ACTIONS_ROLE_ARN}}
           audience: sts.amazonaws.com
 
       - name: Upload to S3

@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed select-none flex justify-around items-center px-4 py-4 w-screen  h-15 md:h-16 lg:h-20 top-0 bg-bg-main/80 backdrop-blur-md z-40">
+  <nav class="navb sticky select-none flex justify-around items-center px-4 py-4 w-screen  h-15 md:h-16 lg:h-20 top-0 bg-bg-main/80 backdrop-blur-md z-50">
       <p class="font-bold text-3xl text-accent">Georgi</p>
       <ul class="uppercase hidden gap-4 font-medium xl:flex">
         <li class="hover:text-accent transition-colors duration-300"

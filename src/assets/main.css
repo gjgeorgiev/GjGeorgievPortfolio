@@ -99,7 +99,7 @@
   .bg-subtle {
     background-color: var(--bd-subtle);
   }
-  
+  /* Home Shell - Navbar */
   /* Hamburger Button Classes */
   .hamburger {
     stroke: var(--accent);
@@ -123,6 +123,7 @@
   translate: -14px -17px;
   rotate: 0.125turn;
   }
+
 
   .button-hamburger .line {
   transition: 0.5s;
