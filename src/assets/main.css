@@ -417,4 +417,7 @@
   .closed__proj {
     color: #f9a13c86;
   }
+  .inprogress__proj {
+    color: #51e6ebab;
+  }
 }

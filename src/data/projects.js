@@ -20,8 +20,9 @@ export const projects = [
     description:
       "A scalable data ingestion and visualization pipeline built on AWS using serverless services. The app uses Google Docs API to ingest data from a Google Docs Table using a Lambda function then sends the data to S3 using an EventBridge scheduler to do it every day after I put in the data from my gym session.  It is visualised using D3.js graphs.",
     tech: ["Vue", "AWS", "Lambda", "EventBridge", "S3", "D3.js"],
-    link: "#",
-    repo: "#",
+    /*link: "#",
+    repo: "#", */
+    inprogress: true,
     type: "open-source"
   },
 ]

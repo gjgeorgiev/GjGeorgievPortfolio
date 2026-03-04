@@ -50,6 +50,12 @@
         >
           Closed-source project — details available on request.
         </a>
+        <a
+          v-if="project.inprogress"
+          class="inprogress__proj"
+        >
+          Project in progress — details available on request.
+        </a>
       </div>
     </BaseCard>
 </template>
